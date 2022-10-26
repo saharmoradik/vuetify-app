@@ -11,17 +11,20 @@
     <v-divider></v-divider>
 
     <v-list density="compact" nav>
-      <v-list-item
-        prepend-icon="mdi-home"
-        title="Home Page"
-        value="homePage"
-      ></v-list-item>
-
-      <v-list-item
-        prepend-icon="mdi-folder"
-        title="Gallery"
-        value="gallery"
-      ></v-list-item>
+      <RouterLink to="/" class="link">
+        <v-list-item
+          prepend-icon="mdi-home"
+          title="Home Page"
+          value="homePage"
+        ></v-list-item>
+      </RouterLink>
+      <RouterLink to="/gallery" class="link">
+        <v-list-item
+          prepend-icon="mdi-folder"
+          title="Gallery"
+          value="gallery"
+        ></v-list-item>
+      </RouterLink>
     </v-list>
   </v-navigation-drawer>
 </template>
@@ -31,3 +34,11 @@ export default {
   name: "SideBar",
 };
 </script>
+
+<style>
+.link:visited,
+.link:link {
+  text-decoration: none;
+  color: inherit;
+}
+</style>
